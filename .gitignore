@@ -1,1 +1,3 @@
-*.csv
+X_test.csv
+X_train.csv
+Y_train.csv
