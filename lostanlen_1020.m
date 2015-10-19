@@ -55,8 +55,8 @@ firstcol_ids = arrayfun(@num2str, (4001:8000).', 'UniformOutput', false);
 firstcol = cellfun(@(x) ['Id', x], firstcol_ids, 'UniformOutput', false);
 secondcol = ...
     arrayfun(@num2str, summary.predicted_Y_test, 'UniformOutput', false);
-csv_matrix = [firstcol, secondcol];
-csvwrite('lostanlen_predicted.csv', csv_matrix);
+csv_cell = [firstcol, secondcol];
+cell2csv('lostanlen_predicted.csv', csv_cell);
 
 %% Export summary for reproducibility
 summary = struct( ...
