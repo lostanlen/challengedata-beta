@@ -56,7 +56,7 @@ firstcol = cellfun(@(x) ['Id', x], firstcol_ids, 'UniformOutput', false);
 secondcol = ...
     arrayfun(@num2str, summary.predicted_Y_test, 'UniformOutput', false);
 csv_cell = [firstcol, secondcol];
-csv_cell = cat(1, {'Id', 'Class'}, csv_cell);
+csv_cell = cat(1, {'ID', 'TARGET'}, csv_cell);
 cell2csv('lostanlen_predicted.csv', csv_cell);
 
 %% Export summary for reproducibility
